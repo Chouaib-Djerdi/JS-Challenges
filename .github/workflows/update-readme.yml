@@ -19,7 +19,7 @@ jobs:
           echo "<tr>" >> README.md
           for screenshot in screenshots/*; do
             echo "<td>" >> README.md
-            echo "<img src='$screenshot' alt='Screenshot' width='200'/>" >> README.md
+            echo "<img src='$screenshot' alt='Screenshot' width='400'/>" >> README.md
             echo "</td>" >> README.md
           done
           echo "</tr>" >> README.md
