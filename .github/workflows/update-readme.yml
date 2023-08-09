@@ -13,17 +13,37 @@ jobs:
 
       - name: Generate Screenshot Grid
         run: |
-          echo "## Project Screenshots" >> README.md
-          echo "" >> README.md
-          echo "<table>" >> README.md
-          echo "<tr>" >> README.md
+          # Get the current content of README.md without the last two lines
+          head -n -2 README.md > temp_readme.md
+
+          echo "<tr>" >> temp_readme.md
+
+          # Initialize a counter to keep track of screenshots in the current row
+          screenshot_count=0
+
           for screenshot in screenshots/*; do
-            echo "<td>" >> README.md
-            echo "<img src='$screenshot' alt='Screenshot' width='400'/>" >> README.md
-            echo "</td>" >> README.md
+            if [ $screenshot_count -eq 2 ]; then
+              echo "</tr>" >> temp_readme.md
+              echo "<tr>" >> temp_readme.md
+              screenshot_count=0
+            fi
+
+            echo "<td>" >> temp_readme.md
+            echo "<img src='$screenshot' alt='Screenshot' width='400'/>" >> temp_readme.md
+            echo "</td>" >> temp_readme.md
+
+            screenshot_count=$((screenshot_count + 1))
           done
-          echo "</tr>" >> README.md
-          echo "</table>" >> README.md
+
+          # Close the last row if there are remaining screenshots
+          if [ $screenshot_count -ne 0 ]; then
+            echo "</tr>" >> temp_readme.md
+          fi
+
+          echo "</table>" >> temp_readme.md
+
+          # Move the modified content back to README.md
+          mv temp_readme.md README.md
 
       - name: Commit and Push Changes
         run: |
