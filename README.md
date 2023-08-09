@@ -1,3 +1,3 @@
-## Project Screenshots
+## Projects Screenshots
 
 <!-- Screenshot Grid will be inserted here -->
