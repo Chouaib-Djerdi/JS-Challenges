@@ -1,0 +1,34 @@
+name: Update README with Screenshots
+on:
+  push:
+    paths:
+      - 'screenshots/**'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Generate Screenshot Grid
+        run: |
+          echo "## Project Screenshots" >> README.md
+          echo "" >> README.md
+          echo "<table>" >> README.md
+          echo "<tr>" >> README.md
+          for screenshot in screenshots/*; do
+            echo "<td>" >> README.md
+            echo "<img src='$screenshot' alt='Screenshot' width='200'/>" >> README.md
+            echo "</td>" >> README.md
+          done
+          echo "</tr>" >> README.md
+          echo "</table>" >> README.md
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update README with new screenshots"
+          git push
