@@ -1,2 +1,3 @@
-# JS-Challenges
- JS Learning Projects
+## Projects Screenshots
+
+<!-- Screenshot Grid will be inserted here -->
