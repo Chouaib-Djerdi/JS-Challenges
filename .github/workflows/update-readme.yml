@@ -13,37 +13,27 @@ jobs:
 
       - name: Generate Screenshot Grid
         run: |
-          # Get the current content of README.md without the last two lines
-          head -n -2 README.md > temp_readme.md
+          # Read the current README content
+          readme_content=$(cat README.md)
 
-          echo "<tr>" >> temp_readme.md
+          # Extract existing screenshots from README
+          existing_screenshots=$(echo "$readme_content" | grep '<img src="screenshots/')
 
-          # Initialize a counter to keep track of screenshots in the current row
-          screenshot_count=0
+          # Initialize a variable to track added screenshots
+          new_screenshots=""
 
           for screenshot in screenshots/*; do
-            if [ $screenshot_count -eq 2 ]; then
-              echo "</tr>" >> temp_readme.md
-              echo "<tr>" >> temp_readme.md
-              screenshot_count=0
+            # Check if the screenshot is already in the README
+            if ! echo "$existing_screenshots" | grep -q "$screenshot"; then
+              new_screenshots+="<td><img src='$screenshot' alt='Screenshot' width='400'/></td>"
             fi
-
-            echo "<td>" >> temp_readme.md
-            echo "<img src='$screenshot' alt='Screenshot' width='400'/>" >> temp_readme.md
-            echo "</td>" >> temp_readme.md
-
-            screenshot_count=$((screenshot_count + 1))
           done
 
-          # Close the last row if there are remaining screenshots
-          if [ $screenshot_count -ne 0 ]; then
-            echo "</tr>" >> temp_readme.md
+          # If there are new screenshots, update the README
+          if [ -n "$new_screenshots" ]; then
+            new_row="<tr>$new_screenshots</tr>"
+            sed -i "s|<tr>$|<tr>$new_row|" README.md
           fi
-
-          echo "</table>" >> temp_readme.md
-
-          # Move the modified content back to README.md
-          mv temp_readme.md README.md
 
       - name: Commit and Push Changes
         run: |
