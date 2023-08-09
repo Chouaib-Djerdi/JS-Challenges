@@ -2,7 +2,7 @@ name: Update README with Screenshots
 on:
   push:
     paths:
-      - 'screenshots/**'
+      - "screenshots/**"
 
 jobs:
   update-readme:
@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        
+
       - name: Generate Screenshot Grid
         run: |
           echo "## Project Screenshots" >> README.md
@@ -27,8 +27,9 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          set -e
+          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git config --local user.name "$GITHUB_ACTOR"
           git add README.md
           git commit -m "Update README with new screenshots"
           git push
