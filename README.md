@@ -42,5 +42,9 @@
 <td>
 <img src='screenshots/quizzjs.png' alt='Screenshot' width='400'/>
 </td>
+<tr>
+<td>
+<img src='screenshots/*' alt='Screenshot' width='400'/>
+</td>
 </tr>
 </table>
