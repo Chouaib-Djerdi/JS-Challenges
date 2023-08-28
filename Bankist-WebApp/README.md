@@ -2,7 +2,12 @@
 
 This is a Javascript Web Application that simulates transactions of a user's real world bank account.
 
+Bankist Web App : <a href="https://chouaib-djerdi.github.io/JS-Challenges/Bankist-WebApp/" target="_blank">live</a>
+
 ## 📷 Screenshots
+![bankist](https://github.com/Chouaib-Djerdi/JS-Challenges/assets/116681645/e844a52b-d1d3-425b-96bd-98df5a4b54bc) 
+
+
 
 ## ⏬ FAQ
 
