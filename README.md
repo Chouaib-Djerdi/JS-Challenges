@@ -7,21 +7,21 @@ PS : You can find a seperate description about a project in its seperate Readme 
 
 ## ⏬ Demo
 
-Bankist Web App : 
+Bankist Web App : <a href="https://chouaib-djerdi.github.io/JS-Challenges/Bankist-WebApp/" target="_blank">live</a>
 
-Guess The Number :
+Guess The Number :  <a href="https://chouaib-djerdi.github.io/JS-Challenges/Guess-The-Number/" target="_blank">live</a>
 
-Pig Game :
+Pig Game :  <a href="https://chouaib-djerdi.github.io/JS-Challenges/Pig%20Game/" target="_blank">live</a>
 
-Javascript Drum Kit :
+Javascript Drum Kit :  <a href="https://chouaib-djerdi.github.io/JS-Challenges/JavaScript%20Drum%20Kit/index-START.html" target="_blank">live</a>
 
-CSS Clock : 
+CSS Clock : <a href="https://chouaib-djerdi.github.io/JS-Challenges/JS%20&%20CSS%20Clock/index-START.html" target="_blank">live</a>
 
-Modal : 
+Modal :  <a href="https://chouaib-djerdi.github.io/JS-Challenges/Modal/" target="_blank">live</a>
 
-CSS Varibales :
+CSS Varibales : <a href="https://chouaib-djerdi.github.io/JS-Challenges/CSS%20Variables/index-START.html" target="_blank">live</a>
 
-Quizz JS : 
+Quizz JS : <a href="https://chouaib-djerdi.github.io/JS-Challenges/QuizzJS/" target="_blank">live</a>
 
 
 
