@@ -23,6 +23,7 @@ CSS Varibales : <a href="https://chouaib-djerdi.github.io/JS-Challenges/CSS%20Va
 
 Quizz JS : <a href="https://chouaib-djerdi.github.io/JS-Challenges/QuizzJS/" target="_blank">live</a>
 
+Bankist-Landing-Page : <a href="https://chouaib-djerdi.github.io/JS-Challenges/Bankist-Landing-Page/" target="_blank">live</a>
 
 
 ## 🚀 Run Locally
