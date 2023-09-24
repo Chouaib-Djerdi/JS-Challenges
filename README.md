@@ -25,6 +25,8 @@ Quizz JS : <a href="https://chouaib-djerdi.github.io/JS-Challenges/QuizzJS/" tar
 
 Bankist-Landing-Page : <a href="https://chouaib-djerdi.github.io/JS-Challenges/Bankist-Landing-Page/" target="_blank">live</a>
 
+Hacker Effect : <a href="https://chouaib-djerdi.github.io/JS-Challenges/Hacker-Effect/" target="_blank">live</a>
+
 
 ## 🚀 Run Locally
 
