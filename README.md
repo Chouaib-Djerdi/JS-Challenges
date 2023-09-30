@@ -27,6 +27,8 @@ Bankist-Landing-Page : <a href="https://chouaib-djerdi.github.io/JS-Challenges/B
 
 Hacker Effect : <a href="https://chouaib-djerdi.github.io/JS-Challenges/Hacker-Effect/" target="_blank">live</a>
 
+Mapty-Geolocation : <a href="https://chouaib-djerdi.github.io/JS-Challenges/Mapty-Geolocation/" target="_blank">live</a>
+
 
 ## 🚀 Run Locally
 
